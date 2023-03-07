@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "17c7c753-9545-4d6f-b411-c26ec6ef73ba",
+		"name": "VPTask Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16946341"
+	},
+	"item": [
+		{
+			"name": "Example Request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CustomerDto\":{\r\n        \"Name\": \"Andy Barrett\",\r\n        \"Email\": \"ag.barrett@outlook.com\"\r\n    },\r\n    \"ItemDtoList\":[\r\n        {\r\n            \"Id\": \"C0459BCF-5961-4805-9D5E-24FBFC862738\",\r\n            \"Name\": \"Bower Palma Instant Boiling Water Tap With Boiler & Filter\",\r\n            \"Quantity\": 2\r\n        },\r\n        {\r\n            \"Id\": \"C8FF5A2A-64D9-41BF-AD75-4ABA0E502D06\",\r\n            \"Name\": \"Toreno 500x700mm Ambient Colour Change LED Bluetooth Mirror incl. Touch Sensor + Anti-Fog\",\r\n            \"Quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7146/api/order/PlaceGuestOrder",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"order",
+						"PlaceGuestOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example Request - Fails Validation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CustomerDto\":{\r\n        \"Name\": \"\",\r\n        \"Email\": \"ag.barrettoutlook.com\"\r\n    },\r\n    \"ItemDtoList\":[\r\n        {\r\n            \"Id\": \"31aaa856-5677-412e-9b75-fee9d2b63d19\",\r\n            \"Name\": \"Metro Smart Toilet with Bidet Wash Function, Heated Seat + Dryer\",\r\n            \"Quantity\": 2\r\n        },\r\n        {\r\n            \"Id\": \"C8FF5A2A-64D9-41BF-AD75-4ABA0E502D06\",\r\n            \"Name\": \"Toreno 500x700mm Ambient Colour Change LED Bluetooth Mirror incl. Touch Sensor + Anti-Fog\",\r\n            \"Quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7146/api/order/PlaceGuestOrder",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"order",
+						"PlaceGuestOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
